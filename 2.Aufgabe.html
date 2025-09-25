@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>One Piece – Charakter Brook</title>
+
+  <!-- Theme Light -->
+  <style id="theme-light">
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #e6e6e6;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+      margin: 0 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    thead {
+      background: #ccc;
+    }
+    tbody tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    td, th {
+      border: 1px solid #999;
+      padding: 0.5rem;
+    }
+    button {
+      background: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Theme Accent -->
+  <style id="theme-accent" disabled>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #1b1b32;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #ff4da6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+      margin: 0 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: yellow;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    thead {
+      background: #ff4da6;
+      color: white;
+    }
+    tbody tr:nth-child(even) {
+      background: #333;
+    }
+    td, th {
+      border: 1px solid #666;
+      padding: 0.5rem;
+    }
+    button {
+      background: yellow;
+      color: #1b1b32;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Brook – Musiker der Strohhutbande</h1>
+    <nav>
+      <ul>
+        <li><a href="#beschreibung">Beschreibung</a></li>
+        <li><a href="#fakten">Fakten</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beschreibung">
+      <h2>Beschreibung</h2>
+      <p>Brook ist der Musiker der Strohhutpiraten. Durch die Kraft der Yomi Yomi no Mi 
+         kehrte er nach seinem Tod ins Leben zurück – allerdings nur als lebendes Skelett. 
+         Trotz seines ungewöhnlichen Aussehens hat er ein fröhliches Wesen und liebt Musik.</p>
+    </section>
+
+    <section id="fakten">
+      <h2>Wichtige Fakten</h2>
+      <table>
+        <caption>Brook – Übersicht</caption>
+        <thead>
+          <tr>
+            <th>Attribut</th>
+            <th>Wert</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Name</td><td>Brook</td></tr>
+          <tr><td>Rolle</td><td>Musiker</td></tr>
+          <tr><td>Teufelsfrucht</td><td>Yomi Yomi no Mi</td></tr>
+          <tr><td>Alter</td><td>90+</td></tr>
+          <tr><td>Waffe</td><td>Schwertstock</td></tr>
+          <tr><td>Herkunft</td><td>West Blue</td></tr>
+          <tr><td>Bande</td><td>Strohhutpiraten</td></tr>
+          <tr><td>Erster Auftritt</td><td>Thriller Bark Arc</td></tr>
+          <tr><td>Traum</td><td>Laboon wiedersehen</td></tr>
+          <tr><td>Lieblingssatz</td><td>„Yohohoho!“</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="galerie">
+      <h2>Galerie</h2>
+      <img src="https://i.redd.it/oid8m8qg1jg91.jpg" width="250">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzy43Mjxh4eYles_GUkbCB-r62XembUNIARg&s" width="263">
+    </section>
+
+    <aside>
+      <h3>Kleiner Fun Fact</h3>
+      <p>Brook macht oft Witze über sein fehlendes Fleisch, z. B. „Darf ich Ihr Höschen sehen?“</p>
+    </aside>
+
+    <section id="kontakt">
+      <h2>Kontaktformular</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="nachricht">Nachricht:</label><br>
+        <textarea id="nachricht" name="nachricht" rows="4"></textarea><br><br>
+
+        <button type="submit">Absenden</button>
+      </form>
+      <button id="theme-toggle">Theme wechseln</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 One Piece Fanprojekt</p>
+  </footer>
+<!--ka was das hier macht, von KI-->
+  <script>
+    const btn = document.getElementById("theme-toggle");
+    const light = document.getElementById("theme-light");
+    const accent = document.getElementById("theme-accent");
+
+    btn.addEventListener("click", () => {
+      if (accent.hasAttribute("disabled")) {
+        light.setAttribute("disabled", "true");
+        accent.removeAttribute("disabled");
+      } else {
+        accent.setAttribute("disabled", "true");
+        light.removeAttribute("disabled");
+      }
+    });
+  </script>
+</body>
+</html>
