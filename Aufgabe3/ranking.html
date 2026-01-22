@@ -1,189 +1,140 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devil Fruits Atlas – Ranking</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ranking – Devil Fruits</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="topbar">
-    <div class="wrapper bar">
-      <div class="brand">
-        <img class="logo" src="logo.svg" alt="Devil Fruit Icon">
-        <div class="brand-title">
-          <strong>Devil Fruits Atlas</strong>
-          <span>One Piece • CSS/HTML Übungsseite</span>
-        </div>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.svg" alt="Devil Fruit Icon" class="brand__logo" />
+      <div class="brand__text">
+        <h1 class="brand__title">Devil Fruits</h1>
+        <p class="brand__sub">Ranking & Tabelle</p>
       </div>
-
-      <input type="checkbox" id="navToggle" aria-label="Menü öffnen/schließen">
-      <label class="burger" for="navToggle" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-
-      <nav class="nav" aria-label="Hauptmenü">
-          <a class="" href="index.html">Home</a>
-          <a class="" href="fruits.html">Arten & Beispiele</a>
-          <a class="active" href="ranking.html">Ranking</a>
-      </nav>
     </div>
+
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainnav" onclick="toggleNav()">
+      ☰
+    </button>
+
+    <nav id="mainnav" class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="fruits.html" class="nav__link">Frucht-Arten</a>
+      <a href="ranking.html" class="nav__link nav__link--active">Ranking</a>
+    </nav>
   </header>
 
-
-  <section class="hero">
-    <div class="wrapper hero-card">
-      <h1>Ranking (Fan-Tierlist)</h1>
-      <p>
-        Nur eine Beispiel-Liste fürs Layout: S-Tier bis B-Tier. Wichtig ist hier die Kombination aus Tabelle,
-        Listen und einem Formular (Anforderung).
-      </p>
-      <div class="badges">
-        <div class="badge"><strong>Tabelle</strong> + :nth-child</div>
-        <div class="badge"><strong>Formular</strong> + :focus</div>
-        <div class="badge"><strong>Sticky</strong> Menü</div>
-      </div>
-    </div>
-  </section>
-
-  <main class="wrapper grid">
+  <main class="container">
     <section class="card">
-      <h2>Tier-Tabelle</h2>
-      <p class="small">
-        Du kannst in der Präsentation erklären: Tabellenkopf, Hover-Zeile, Zebra-Pattern über <code>:nth-child</code>,
-        und warum Tabellen für strukturierte Daten passen.
+      <h2>Mein kleines Ranking (subjektiv)</h2>
+      <p class="muted">
+        Das ist nicht „offiziell“, sondern einfach meine Meinung (für die Aufgabe).
       </p>
 
-      <table aria-label="Devil Fruit Ranking Tabelle">
-        <thead>
-          <tr>
-            <th>Tier</th>
-            <th>Devil Fruit</th>
-            <th>Typ</th>
-            <th>Warum (kurz)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>S</td>
-            <td>Ope Ope no Mi</td>
-            <td>Paramecia</td>
-            <td>Extrem flexibel, Support + Offense</td>
-          </tr>
-          <tr>
-            <td>S</td>
-            <td>Gura Gura no Mi</td>
-            <td>Paramecia</td>
-            <td>Massive Zerstörungskraft</td>
-          </tr>
-          <tr>
-            <td>A</td>
-            <td>Pika Pika no Mi</td>
-            <td>Logia</td>
-            <td>Speed + Druck + schwer zu kontern</td>
-          </tr>
-          <tr>
-            <td>A</td>
-            <td>Mera Mera no Mi</td>
-            <td>Logia</td>
-            <td>Starkes Element, viele Combos</td>
-          </tr>
-          <tr>
-            <td>B</td>
-            <td>Hito Hito no Mi</td>
-            <td>Zoan</td>
-            <td>Utility + Formen, je nach Modell</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <hr class="hr">
-
-      <h2>Top-5 Liste (kurz)</h2>
-      <ol>
-        <li>Ope Ope no Mi</li>
-        <li>Gura Gura no Mi</li>
-        <li>Pika Pika no Mi</li>
-        <li>Mera Mera no Mi</li>
-        <li>(Dein Pick)</li>
-      </ol>
-
-      <hr class="hr">
-
-      <h2>Formular: Dein Vorschlag</h2>
-      <p class="small">
-        Dummy-Formular (ohne Backend) – ideal um Labels, Inputs, Selects und Focus-Styles zu zeigen.
-      </p>
-
-      <form action="#" method="post" aria-label="Devil Fruit Vorschlag">
-        <div class="field">
-          <label for="name">Fruchtname</label>
-          <input id="name" name="name" type="text" placeholder="z.B. Yami Yami no Mi" required>
-        </div>
-
-        <div class="field">
-          <label for="type">Typ</label>
-          <select id="type" name="type" required>
-            <option value="">Bitte auswählen…</option>
-            <option>Paramecia</option>
-            <option>Zoan</option>
-            <option>Logia</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="tier">Dein Tier</label>
-          <select id="tier" name="tier" required>
-            <option value="">Bitte auswählen…</option>
-            <option>S</option>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="reason">Begründung (kurz)</label>
-          <textarea id="reason" name="reason" placeholder="Warum ist sie stark oder cool?"></textarea>
-        </div>
-
-        <div class="actions">
-          <button type="submit">Absenden (Demo)</button>
-          <button class="secondary" type="reset">Zurücksetzen</button>
-        </div>
-      </form>
+      <div class="rank-grid">
+        <article class="rank">
+          <h3>1) Horo Horo no Mi</h3>
+          <p>Kann Geister erschaffen die andere depressiv machen.</p>
+        </article>
+        <article class="rank">
+          <h3>2) Gura Gura no Mi</h3>
+          <p>Extrem zerstörerisch – reine Power.</p>
+        </article>
+        <article class="rank">
+          <h3>3) Pika Pika no Mi</h3>
+          <p>Schnelligkeit + Laser/Light – schwer zu kontern.</p>
+        </article>
+        <article class="rank">
+          <h3>4) Mera Mera no Mi</h3>
+          <p>Klassiker, Feuer ist immer stark.</p>
+        </article>
+      </div>
     </section>
 
-    <aside class="card aside">
-      <h2>Checkliste (fürs Abgeben)</h2>
-      <ul>
-        <li>Menü + mehrere Seiten</li>
-        <li>Überschriften + mehrere Artikel</li>
-        <li>Liste + Tabelle</li>
-        <li>Bild (SVG) + Video</li>
-        <li>Formular + Flexbox + Grid</li>
-        <li>Media Queries + Pseudo-Selektoren</li>
-      </ul>
-
-      <div class="tip">
-        <strong>Tipp:</strong> Öffne DevTools und zeig beim Vorführen, wie das Layout bei kleiner Breite umspringt.
+    <section class="card">
+      <h2>Tabelle: Kurzvergleich</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Frucht</th>
+              <th>Typ</th>
+              <th>Stärke (1–10)</th>
+              <th>Warum?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Horo Horo</td>
+              <td>Paramecia</td>
+              <td>10</td>
+              <td>Depresssion</td>
+            </tr>
+            <tr>
+              <td>Gura Gura</td>
+              <td>Paramecia</td>
+              <td>9</td>
+              <td>Massiver Schaden</td>
+            </tr>
+            <tr>
+              <td>Pika Pika</td>
+              <td>Logia</td>
+              <td>9</td>
+              <td>Schnell + schwer zu treffen</td>
+            </tr>
+            <tr>
+              <td>Mera Mera</td>
+              <td>Logia</td>
+              <td>8</td>
+              <td>Stark, aber nicht unbesiegbar</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </section>
 
-      <hr class="hr">
+    <section class="card">
+      <h2>Dein Ranking</h2>
+      <p class="muted">Nur Demo – keine echte Speicherung.</p>
 
-      <h3>Zurück</h3>
-      <ul>
-        <li><a href="fruits.html">Arten & Beispiele</a></li>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </aside>
+      <form class="form" action="#" method="get">
+        <div class="two-col">
+          <label>
+            Lieblingsfrucht
+            <input type="text" name="fruit" placeholder="z.B. Ope Ope" required />
+          </label>
+
+          <label>
+            Score (1–10)
+            <input type="number" name="score" min="1" max="10" value="8" />
+          </label>
+        </div>
+
+        <label>
+          Begründung (kurz)
+          <textarea name="reason" rows="3" placeholder="weil..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Senden</button>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <div class="wrapper">
-      <div>© 2026 • One Piece Fan-Übungsseite (nur Schulprojekt).</div>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 – Ranking Seite</p>
   </footer>
+
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('mainnav');
+      const btn = document.querySelector('.nav-toggle');
+      nav.classList.toggle('nav--open');
+      const open = nav.classList.contains('nav--open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+  </script>
 </body>
 </html>

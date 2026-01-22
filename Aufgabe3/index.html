@@ -1,198 +1,137 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devil Fruits Atlas – Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devil Fruits – One Piece (Mini-Projekt)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="topbar">
-    <div class="wrapper bar">
-      <div class="brand">
-        <img class="logo" src="logo.svg" alt="Devil Fruit Icon">
-        <div class="brand-title">
-          <strong>Devil Fruits Atlas</strong>
-          <span>One Piece • CSS/HTML Übungsseite</span>
-        </div>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.svg" alt="Devil Fruit Icon" class="brand__logo" />
+      <div class="brand__text">
+        <h1 class="brand__title">One Piece – Devil Fruits</h1>
+        <p class="brand__sub">kleine Infoseite (CSS Übung)</p>
       </div>
-
-      <input type="checkbox" id="navToggle" aria-label="Menü öffnen/schließen">
-      <label class="burger" for="navToggle" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-
-      <nav class="nav" aria-label="Hauptmenü">
-          <a class="active" href="index.html">Home</a>
-          <a class="" href="fruits.html">Arten & Beispiele</a>
-          <a class="" href="ranking.html">Ranking</a>
-      </nav>
     </div>
+
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainnav" onclick="toggleNav()">
+      ☰
+    </button>
+
+    <nav id="mainnav" class="nav">
+      <a href="index.html" class="nav__link nav__link--active">Home</a>
+      <a href="fruits.html" class="nav__link">Frucht-Arten</a>
+      <a href="ranking.html" class="nav__link">Ranking</a>
+    </nav>
   </header>
 
+  <main class="container">
+    <section class="layout">
+      <article class="card">
+        <h2>Worum geht’s?</h2>
+        <p>
+          In One Piece gibt es sogenannte <strong>Teufelsfrüchte</strong> (Devil Fruits).
+          Wer eine isst, bekommt eine Fähigkeit – verliert aber meistens die Fähigkeit zu schwimmen.
+          Auf dieser Seite sammle ich ein paar Beispiele und ein Ranking.
+        </p>
 
-  <section class="hero">
-    <div class="wrapper hero-card">
-      <h1>One Piece Devil Fruits – kurz erklärt</h1>
-      <p>
-        Devil Fruits (悪魔の実) geben übernatürliche Fähigkeiten – aber du verlierst die Fähigkeit zu schwimmen.
-        Diese Seite ist eine kleine <b>responsive</b> Übungs-Homepage mit Menü, Artikeln, Tabellen, Listen, Bildern und Video.
-      </p>
-      <div class="badges" aria-label="Techniken">
-        <div class="badge"><strong>Grid</strong> Layout</div>
-        <div class="badge"><strong>Flexbox</strong> Cards</div>
-        <div class="badge"><strong>Media Queries</strong> Mobile</div>
-        <div class="badge"><strong>Sticky</strong> Menu</div>
-        <div class="badge"><strong>Pseudo-Selektoren</strong> :hover / :focus / :nth-child</div>
-      </div>
-    </div>
-  </section>
-
-  <main class="wrapper grid">
-    <section class="card" aria-labelledby="grundlagen">
-      <h2 id="grundlagen">Grundlagen: Die 3 Kategorien</h2>
-      <p class="small">
-        In One Piece gibt es drei große Gruppen. Jede hat typische Stärken und „Spielregeln“.
-      </p>
-
-      <div class="fruit-cards" aria-label="Beispiele als Karten">
-        <article class="fruit">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Devil Fruit icon">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffcc00"/>
-      <stop offset="1" stop-color="#ff5a5f"/>
-    </linearGradient>
-  </defs>
-  <path d="M52 12c-8 0-14 4-18 10-2 4-3 8-3 12 0 2 0 4 1 6-9 5-15 15-15 26 0 18 14 30 31 30s31-12 31-30c0-12-7-22-17-27 1-2 1-4 1-6 0-14-11-21-21-21z" fill="url(#g)" opacity="0.95"/>
-  <path d="M62 10c-7 1-13 5-17 11 6-1 12 0 17 3 5 3 9 8 10 14 3-6 3-13 0-19-2-4-6-8-10-9z" fill="#e8eefc" opacity="0.25"/>
-  <path d="M37 60c8-9 16-8 24 1" stroke="#0b1220" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
-  <path d="M34 72c10-10 20-10 30 0" stroke="#0b1220" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
-  <path d="M49 6c0 10-6 16-14 18 8 1 18-2 24-10 3-5 4-10 3-14-5 3-9 4-13 6z" fill="#ffcc00" opacity="0.35"/>
-</svg>
-          <div class="meta">
-            <strong>Paramecia</strong>
-            <span>Verändert Körper / Umgebung oder gibt Spezialfähigkeit</span>
-          </div>
-        </article>
-
-        <article class="fruit">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Devil Fruit icon">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffcc00"/>
-      <stop offset="1" stop-color="#ff5a5f"/>
-    </linearGradient>
-  </defs>
-  <path d="M52 12c-8 0-14 4-18 10-2 4-3 8-3 12 0 2 0 4 1 6-9 5-15 15-15 26 0 18 14 30 31 30s31-12 31-30c0-12-7-22-17-27 1-2 1-4 1-6 0-14-11-21-21-21z" fill="url(#g)" opacity="0.95"/>
-  <path d="M62 10c-7 1-13 5-17 11 6-1 12 0 17 3 5 3 9 8 10 14 3-6 3-13 0-19-2-4-6-8-10-9z" fill="#e8eefc" opacity="0.25"/>
-  <path d="M37 60c8-9 16-8 24 1" stroke="#0b1220" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
-  <path d="M34 72c10-10 20-10 30 0" stroke="#0b1220" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
-  <path d="M49 6c0 10-6 16-14 18 8 1 18-2 24-10 3-5 4-10 3-14-5 3-9 4-13 6z" fill="#ffcc00" opacity="0.35"/>
-</svg>
-          <div class="meta">
-            <strong>Zoan</strong>
-            <span>Verwandlung in Tiere (oder uralte/mythische Varianten)</span>
-          </div>
-        </article>
-
-        <article class="fruit">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Devil Fruit icon">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffcc00"/>
-      <stop offset="1" stop-color="#ff5a5f"/>
-    </linearGradient>
-  </defs>
-  <path d="M52 12c-8 0-14 4-18 10-2 4-3 8-3 12 0 2 0 4 1 6-9 5-15 15-15 26 0 18 14 30 31 30s31-12 31-30c0-12-7-22-17-27 1-2 1-4 1-6 0-14-11-21-21-21z" fill="url(#g)" opacity="0.95"/>
-  <path d="M62 10c-7 1-13 5-17 11 6-1 12 0 17 3 5 3 9 8 10 14 3-6 3-13 0-19-2-4-6-8-10-9z" fill="#e8eefc" opacity="0.25"/>
-  <path d="M37 60c8-9 16-8 24 1" stroke="#0b1220" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
-  <path d="M34 72c10-10 20-10 30 0" stroke="#0b1220" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
-  <path d="M49 6c0 10-6 16-14 18 8 1 18-2 24-10 3-5 4-10 3-14-5 3-9 4-13 6z" fill="#ffcc00" opacity="0.35"/>
-</svg>
-          <div class="meta">
-            <strong>Logia</strong>
-            <span>Elemente/Naturkräfte – oft „intangible“ Körper</span>
-          </div>
-        </article>
-      </div>
-
-      <hr class="hr">
-
-      <article>
-        <h3>Warum sind Devil Fruits so begehrt?</h3>
-        <ul>
-          <li>Extrem selten → hoher Marktwert (und sehr begehrt bei Piraten & Marine)</li>
-          <li>Einige Fähigkeiten sind „Gamechanger“ im Kampf (Movement, Defense, AOE)</li>
-          <li>Synergie mit Haki, Waffen, Taktik und Teamplay</li>
+        <h3>Kurze Regeln (einfach erklärt)</h3>
+        <ul class="bullets">
+          <li>Meist nur <strong>eine</strong> Frucht pro Person (sonst gefährlich).</li>
+          <li>Meerwasser / Seestein schwächt viele Nutzer.</li>
+          <li>Es gibt verschiedene <strong>Typen</strong> (Paramecia, Zoan, Logia).</li>
         </ul>
       </article>
 
-      <hr class="hr">
+      <aside class="card">
+        <h2>Schnellnavigation</h2>
+        <ol class="steps">
+          <li><a href="fruits.html">Frucht-Arten + Video</a></li>
+          <li><a href="ranking.html">Ranking + Tabelle + Formular</a></li>
+          <li><a href="#mini-table">Mini-Tabelle (Home)</a></li>
+        </ol>
+      </aside>
+    </section>
 
-      <article>
-        <h3>Mini-Tabelle: Kategorie-Vergleich</h3>
-        <table aria-label="Vergleichstabelle">
+    <section class="card">
+      <h2 id="mini-table">Mini-Übersicht</h2>
+      <p class="muted">
+        Nur eine kleine Tabelle (mehr Details sind auf den Unterseiten).
+      </p>
+
+      <div class="table-wrap">
+        <table>
           <thead>
             <tr>
-              <th>Kategorie</th>
-              <th>Typische Stärke</th>
-              <th>Risiko/Limit</th>
+              <th>Typ</th>
+              <th>Was macht der Typ?</th>
+              <th>Beispiel</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Paramecia</td>
-              <td>Sehr vielfältig</td>
-              <td>Oft stark von Kreativität abhängig</td>
+              <td>„Wildcard“: Körper verändern oder Effekte erzeugen</td>
+              <td>Gomu Gomu</td>
             </tr>
             <tr>
               <td>Zoan</td>
-              <td>Boost für Körper/Regeneration</td>
-              <td>Manche Formen sind „linear“ im Nutzen</td>
+              <td>Verwandlung in Tiere (oder Mischformen)</td>
+              <td>Tori Tori</td>
             </tr>
             <tr>
               <td>Logia</td>
-              <td>Element-Kontrolle + oft schwer zu treffen</td>
-              <td>Haki/Counter-Elemente machen es knifflig</td>
+              <td>Element werden + Element erzeugen</td>
+              <td>Mera Mera</td>
             </tr>
           </tbody>
         </table>
-      </article>
+      </div>
     </section>
 
-    <aside class="card aside">
-      <h2>Quick Facts</h2>
-      <p class="small">
-        Für die Präsentation in der Klasse kannst du hier kurz erklären, was du technisch gemacht hast:
-      </p>
+    <section class="card">
+      <h2>Kontakt / Feedback</h2>
+      <p class="muted">Mini-Formular (nur Demo – nichts wird gespeichert).</p>
 
-      <div class="tip">
-        <strong>Responsive:</strong> Desktop = 2 Spalten (Grid), Mobile = 1 Spalte + Burger-Menü (Media Query).
-      </div>
-      <div class="tip">
-        <strong>Interaktion:</strong> Hover-Effekte bei Links/Karten, Focus-Styling für Tastatur.
-      </div>
-      <div class="tip">
-        <strong>Animation:</strong> Logo „schwebt“ (CSS @keyframes).
-      </div>
+      <form class="form" action="#" method="get">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="z.B. Marcel" required />
+        </label>
 
-      <hr class="hr">
+        <label>
+          Lieblings-Typ
+          <select name="type">
+            <option value="paramecia">Paramecia</option>
+            <option value="zoan">Zoan</option>
+            <option value="logia">Logia</option>
+          </select>
+        </label>
 
-      <h3>Weiterklicken</h3>
-      <ol>
-        <li><a href="fruits.html">Arten & Beispiele</a></li>
-        <li><a href="ranking.html">Ranking-Liste</a></li>
-      </ol>
-    </aside>
+        <label>
+          Kommentar
+          <textarea name="msg" rows="4" placeholder="kurz was schreiben..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Absenden</button>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <div class="wrapper">
-      <div>© 2026 • One Piece Fan-Übungsseite (nur Schulprojekt). Keine offiziellen Assets.</div>
-      <div>Pages: <a href="index.html">Home</a> • <a href="fruits.html">Arten</a> • <a href="ranking.html">Ranking</a></div>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 – Schulprojekt „Webseite mit CSS“ (Thema: One Piece)</p>
   </footer>
+
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('mainnav');
+      const btn = document.querySelector('.nav-toggle');
+      nav.classList.toggle('nav--open');
+      const open = nav.classList.contains('nav--open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+  </script>
 </body>
 </html>
