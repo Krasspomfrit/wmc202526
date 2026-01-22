@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devil Fruits Atlas – Ranking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrapper bar">
+      <div class="brand">
+        <img class="logo" src="logo.svg" alt="Devil Fruit Icon">
+        <div class="brand-title">
+          <strong>Devil Fruits Atlas</strong>
+          <span>One Piece • CSS/HTML Übungsseite</span>
+        </div>
+      </div>
+
+      <input type="checkbox" id="navToggle" aria-label="Menü öffnen/schließen">
+      <label class="burger" for="navToggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Hauptmenü">
+          <a class="" href="index.html">Home</a>
+          <a class="" href="fruits.html">Arten & Beispiele</a>
+          <a class="active" href="ranking.html">Ranking</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="wrapper hero-card">
+      <h1>Ranking (Fan-Tierlist)</h1>
+      <p>
+        Nur eine Beispiel-Liste fürs Layout: S-Tier bis B-Tier. Wichtig ist hier die Kombination aus Tabelle,
+        Listen und einem Formular (Anforderung).
+      </p>
+      <div class="badges">
+        <div class="badge"><strong>Tabelle</strong> + :nth-child</div>
+        <div class="badge"><strong>Formular</strong> + :focus</div>
+        <div class="badge"><strong>Sticky</strong> Menü</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrapper grid">
+    <section class="card">
+      <h2>Tier-Tabelle</h2>
+      <p class="small">
+        Du kannst in der Präsentation erklären: Tabellenkopf, Hover-Zeile, Zebra-Pattern über <code>:nth-child</code>,
+        und warum Tabellen für strukturierte Daten passen.
+      </p>
+
+      <table aria-label="Devil Fruit Ranking Tabelle">
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Devil Fruit</th>
+            <th>Typ</th>
+            <th>Warum (kurz)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>S</td>
+            <td>Ope Ope no Mi</td>
+            <td>Paramecia</td>
+            <td>Extrem flexibel, Support + Offense</td>
+          </tr>
+          <tr>
+            <td>S</td>
+            <td>Gura Gura no Mi</td>
+            <td>Paramecia</td>
+            <td>Massive Zerstörungskraft</td>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>Pika Pika no Mi</td>
+            <td>Logia</td>
+            <td>Speed + Druck + schwer zu kontern</td>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>Mera Mera no Mi</td>
+            <td>Logia</td>
+            <td>Starkes Element, viele Combos</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>Hito Hito no Mi</td>
+            <td>Zoan</td>
+            <td>Utility + Formen, je nach Modell</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr class="hr">
+
+      <h2>Top-5 Liste (kurz)</h2>
+      <ol>
+        <li>Ope Ope no Mi</li>
+        <li>Gura Gura no Mi</li>
+        <li>Pika Pika no Mi</li>
+        <li>Mera Mera no Mi</li>
+        <li>(Dein Pick)</li>
+      </ol>
+
+      <hr class="hr">
+
+      <h2>Formular: Dein Vorschlag</h2>
+      <p class="small">
+        Dummy-Formular (ohne Backend) – ideal um Labels, Inputs, Selects und Focus-Styles zu zeigen.
+      </p>
+
+      <form action="#" method="post" aria-label="Devil Fruit Vorschlag">
+        <div class="field">
+          <label for="name">Fruchtname</label>
+          <input id="name" name="name" type="text" placeholder="z.B. Yami Yami no Mi" required>
+        </div>
+
+        <div class="field">
+          <label for="type">Typ</label>
+          <select id="type" name="type" required>
+            <option value="">Bitte auswählen…</option>
+            <option>Paramecia</option>
+            <option>Zoan</option>
+            <option>Logia</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="tier">Dein Tier</label>
+          <select id="tier" name="tier" required>
+            <option value="">Bitte auswählen…</option>
+            <option>S</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="reason">Begründung (kurz)</label>
+          <textarea id="reason" name="reason" placeholder="Warum ist sie stark oder cool?"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Absenden (Demo)</button>
+          <button class="secondary" type="reset">Zurücksetzen</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="card aside">
+      <h2>Checkliste (fürs Abgeben)</h2>
+      <ul>
+        <li>Menü + mehrere Seiten</li>
+        <li>Überschriften + mehrere Artikel</li>
+        <li>Liste + Tabelle</li>
+        <li>Bild (SVG) + Video</li>
+        <li>Formular + Flexbox + Grid</li>
+        <li>Media Queries + Pseudo-Selektoren</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Tipp:</strong> Öffne DevTools und zeig beim Vorführen, wie das Layout bei kleiner Breite umspringt.
+      </div>
+
+      <hr class="hr">
+
+      <h3>Zurück</h3>
+      <ul>
+        <li><a href="fruits.html">Arten & Beispiele</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <div>© 2026 • One Piece Fan-Übungsseite (nur Schulprojekt).</div>
+    </div>
+  </footer>
+</body>
+</html>
