@@ -1,0 +1,27 @@
+
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid #ccc;
+    padding: 0.5em 1em;
+}
+
+.sortable {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    user-select: none; 
+}
+
+.sortable:hover {
+    background-color: #e0e0e0;
+}
